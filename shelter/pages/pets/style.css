@@ -9,12 +9,13 @@
           flex-direction: column;
   margin: 0 auto;
 }
-.page .intro {
+
+.intro {
   width: 100%;
   position: relative;
   background: url(./../../assets/images/start-screen-gradient-background.png) no-repeat;
 }
-.page .intro .header {
+.intro .header {
   max-width: 1200px;
   margin: 60px auto 0;
   display: -webkit-box;
@@ -24,10 +25,10 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-.page .intro .header .header__text {
+.intro .header .header__text {
   max-width: 184px;
 }
-.page .intro .header .header__text .header__title {
+.intro .header .header__text .header__title {
   margin: 0;
   color: #F1CDB3;
   font-style: normal;
@@ -36,7 +37,7 @@
   line-height: 110%;
   letter-spacing: 0.06em;
 }
-.page .intro .header .header__text .header__subtitle {
+.intro .header .header__text .header__subtitle {
   margin: 10px 0 0;
   color: #FFFFFF;
   font-style: normal;
@@ -45,7 +46,7 @@
   line-height: 15px;
   letter-spacing: 0.1em;
 }
-.page .intro .header .header__nav {
+.intro .header .header__nav {
   width: 443px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -57,7 +58,7 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-.page .intro .header .header__nav .header__link {
+.intro .header .header__nav .header__link {
   margin-top: 16px;
   color: #CDCDCD;
   font-style: normal;
@@ -65,7 +66,7 @@
   font-size: 15px;
   line-height: 160%;
 }
-.page .intro .intro__title {
+.intro .intro__title {
   max-width: 310px;
   margin: 223px 0 0 40px;
   color: #FFFFFF;
@@ -74,7 +75,7 @@
   font-size: 44px;
   line-height: 130%;
 }
-.page .intro .intro__subtitle {
+.intro .intro__subtitle {
   max-width: 460px;
   margin: 42px 0 0 40px;
   color: #CDCDCD;
@@ -83,7 +84,7 @@
   font-size: 15px;
   line-height: 160%;
 }
-.page .intro .intro__button {
+.intro .intro__button {
   width: 207px;
   height: 52px;
   margin: 41px 0 244px 40px;
@@ -98,7 +99,7 @@
   line-height: 130%;
   letter-spacing: 0.06em;
 }
-.page .intro .intro__img {
+.intro .intro__img {
   width: 698px;
   height: 728px;
   position: absolute;
@@ -281,4 +282,249 @@
   line-height: 130%;
   letter-spacing: 0.06em;
   color: #292929;
+}
+
+.help {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: #FFFFFF;
+}
+.help .help__title {
+  max-width: 308px;
+  margin: 80px auto 0;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 130%;
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: #545454;
+}
+.help .help__list {
+  margin: 60px auto 100px;
+  padding: 0;
+  list-style-type: none;
+  width: 1026px;
+  height: 281px;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  /*grid-template-columns: repeat(auto-fill);*/
+  gap: 55px;
+}
+.help .help__list .help__card {
+  margin-right: 120px;
+  height: 113px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.help .help__list .help__card .help__card-title {
+  margin: 30px 0 0 0;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 115%;
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: #545454;
+}
+.help .help__list .help__card .help__card-image-food {
+  margin: 0 auto;
+  width: 47.86px;
+  height: 60px;
+  background: url(../../assets/icons/pet-food.svg) no-repeat;
+}
+.help .help__list .help__card .help__card-image-transportation {
+  margin: 0 auto;
+  width: 59.95px;
+  height: 60px;
+  background: url(../../assets/icons/transportation.svg) no-repeat;
+}
+.help .help__list .help__card .help__card-image-toys {
+  margin: 0 auto;
+  width: 60px;
+  height: 60px;
+  background: url(../../assets/icons/toys.svg) no-repeat;
+}
+.help .help__list .help__card .help__card-image-bowls {
+  margin: 0 auto;
+  width: 60px;
+  height: 56.82px;
+  background: url(../../assets/icons/bowls-and-cups.svg) no-repeat;
+}
+.help .help__list .help__card .help__card-image-shampoos {
+  margin: 0 auto;
+  width: 31.3px;
+  height: 60px;
+  background: url(../../assets/icons/shampoos.svg) no-repeat;
+}
+.help .help__list .help__card .help__card-image-vitamins {
+  margin: 0 auto;
+  width: 60px;
+  height: 54.16px;
+  background: url(../../assets/icons/vitamins.svg) no-repeat;
+}
+.help .help__list .help__card .help__card-image-medicines {
+  margin: 0 auto;
+  width: 60px;
+  height: 60px;
+  background: url(../../assets/icons/medicines.svg) no-repeat;
+}
+.help .help__list .help__card .help__card-image-collars {
+  margin: 0 auto;
+  width: 60px;
+  height: 52.43px;
+  background: url(../../assets/icons/collars-or-leashes.svg) no-repeat;
+}
+.help .help__list .help__card .help__card-image-sleeping {
+  margin: 0 auto;
+  width: 56.29px;
+  height: 60px;
+  background: url(../../assets/icons/sleeping-area.svg) no-repeat;
+}
+
+.donation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: #F6F6F6;
+}
+.donation .donation__image {
+  margin: 92px 30px 111px 0;
+  width: 505px;
+  height: 261px;
+}
+.donation .donation__content {
+  margin-top: 81px;
+}
+.donation .donation__content .donation__title {
+  max-width: 300px;
+  margin: 0;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 130%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  letter-spacing: 0.06em;
+  color: #545454;
+}
+.donation .donation__content .donation__subtitle {
+  max-width: 307px;
+  margin: 20px 0 0 0;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 110%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  letter-spacing: 0.06em;
+  color: #545454;
+}
+.donation .donation__content .donation__card {
+  margin-top: 20px;
+  width: 349px;
+  height: 43px;
+  background: #F1CDB3;
+  border-radius: 9px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.donation .donation__content .donation__card .donation__icon {
+  width: 30px;
+  height: 23px;
+  margin-right: 15px;
+  background: url(../../assets/icons/credit-card.svg) no-repeat;
+  background-size: cover;
+}
+.donation .donation__content .donation__card .donation__number {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 115%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  letter-spacing: 0.06em;
+  color: #545454;
+}
+.donation .donation__content .donation__text {
+  max-width: 380px;
+  margin: 20px 0 0 0;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #B2B2B2;
+}
+
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: url(../../assets/images/footer-gradient-background.png) no-repeat;
+}
+.footer .footer__contact {
+  margin: 56px 161px 0 0;
+}
+.footer .footer__contact .footer__title {
+  margin: 0;
+  max-width: 278px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+  color: #FFFFFF;
+}
+.footer .footer__address {
+  margin: 56px 191px 0 0;
+}
+.footer .footer__address .footer__title {
+  margin: 0;
+  max-width: 270px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+  color: #FFFFFF;
+}
+.footer .footer__image {
+  margin-top: 40px;
+  width: 300px;
+  height: 310px;
 }
