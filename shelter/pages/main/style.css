@@ -17,7 +17,7 @@
   font-weight: 400;
 }
 .page {
-  max-width: 1280px;
+  max-width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -28,14 +28,14 @@
   margin: 0 auto;
 }
 
-.intro {
-  width: 100%;
-  position: relative;
-  background: url(./../../assets/images/start-screen-gradient-background.png) no-repeat;
-}
-.intro .header {
-  max-width: 1200px;
+.header {
+  z-index: 1;
+  width: 1200px;
   margin: 60px auto 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -43,10 +43,10 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-.intro .header .header__text {
+.header .header__text {
   max-width: 187px;
 }
-.intro .header .header__text .header__title {
+.header .header__text .header__title {
   margin: 0;
   color: #F1CDB3;
   font-family: "Georgia";
@@ -56,7 +56,7 @@
   line-height: 110%;
   letter-spacing: 0.06em;
 }
-.intro .header .header__text .header__subtitle {
+.header .header__text .header__subtitle {
   margin: 10px 0 0 4px;
   color: #FFFFFF;
   font-family: "Arial";
@@ -66,7 +66,7 @@
   line-height: 15px;
   letter-spacing: 0.1em;
 }
-.intro .header .header__nav {
+.header .header__nav {
   width: 443px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -78,24 +78,48 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-.intro .header .header__nav .header__link {
+.header .header__nav .header__link {
   margin-top: 16px;
   color: #CDCDCD;
-  font-family: "Arial";
   font-style: normal;
+  font-family: "Arial";
   font-weight: 400;
   font-size: 15px;
   line-height: 160%;
+  text-decoration: none;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
   cursor: pointer;
 }
-.intro .header .header__nav .header__link:hover {
+.header .header__nav .header__link:hover {
   color: #FAFAFA;
 }
-.intro .intro__title {
+.header .header__nav .header__link_active {
+  border-bottom: 3px solid #F1CDB3;
+}
+.header .header__nav .header__link_active:hover {
+  color: #CDCDCD;
+}
+
+.not-only {
+  width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: url(./../../assets/images/start-screen-gradient-background.png) no-repeat;
+}
+.not-only .not-only__title {
   max-width: 310px;
-  margin: 223px 0 0 40px;
+  margin: 343px 0 0 40px;
   color: #FFFFFF;
   font-family: "Georgia";
   font-style: normal;
@@ -103,7 +127,7 @@
   font-size: 44px;
   line-height: 130%;
 }
-.intro .intro__subtitle {
+.not-only .not-only__subtitle {
   max-width: 480px;
   margin: 42px 0 0 40px;
   color: #CDCDCD;
@@ -113,7 +137,7 @@
   font-size: 15px;
   line-height: 160%;
 }
-.intro .intro__button {
+.not-only .not-only__button {
   width: 207px;
   height: 52px;
   margin: 41px 0 244px 40px;
@@ -121,6 +145,8 @@
   background-color: #F1CDB3;
   border-radius: 100px;
   border: 0;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
   color: #292929;
   font-family: "Georgia";
   font-style: normal;
@@ -128,14 +154,12 @@
   font-size: 17px;
   line-height: 130%;
   letter-spacing: 0.06em;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
   cursor: pointer;
 }
-.intro .intro__button:hover {
+.not-only .not-only__button:hover {
   background-color: #FDDCC4;
 }
-.intro .intro__img {
+.not-only .not-only__img {
   width: 698px;
   height: 728px;
   position: absolute;
@@ -530,7 +554,12 @@
   letter-spacing: 0.06em;
   color: #545454;
 }
-.donation .donation__content .donation__card {
+.donation .donation__content .donation__link {
+  text-decoration: none;
+}
+.donation .donation__content .donation__link .donation__card {
+  padding: 0;
+  border: none;
   margin-top: 20px;
   width: 349px;
   height: 43px;
@@ -545,15 +574,21 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  cursor: pointer;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
-.donation .donation__content .donation__card .donation__icon {
+.donation .donation__content .donation__link .donation__card:hover {
+  background: #FDDCC4;
+}
+.donation .donation__content .donation__link .donation__card .donation__icon {
   width: 30px;
   height: 23px;
   margin-right: 15px;
   background: url(../../assets/icons/credit-card.svg) no-repeat;
   background-size: cover;
 }
-.donation .donation__content .donation__card .donation__number {
+.donation .donation__content .donation__link .donation__card .donation__number {
   font-family: "Georgia";
   font-style: normal;
   font-weight: 400;
