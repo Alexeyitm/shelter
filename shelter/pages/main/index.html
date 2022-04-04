@@ -26,11 +26,13 @@
   </header>
 
   <section class="not-only">
-    <h2 class="not-only__title">Not only people need a house</h2>
-    <p class="not-only__subtitle">We offer to give a chance to a little and nice puppy with an 
-      extremely wide and open heart. He or she will love you more than anybody else in&nbsp;the world, you will see!</p>
-    <a href="#our-friends" class="not-only__link"><button class="not-only__button">Make a friend</button></a>
-    <img src="../../assets/images/start-screen-puppy.png" alt="dog" class="not-only__img">
+    <div class="not-only__container">
+      <h2 class="not-only__title">Not only people need a house</h2>
+      <p class="not-only__subtitle">We offer to give a chance to a little and nice puppy with an 
+        extremely wide and open heart. He or she will love you more than anybody else in&nbsp;the world, you will see!</p>
+      <a href="#our-friends" class="not-only__link"><button class="not-only__button">Make a friend</button></a>
+      <img src="../../assets/images/start-screen-puppy.png" alt="dog" class="not-only__img">
+    </div>    
   </section>
 
   <section class="about">
@@ -47,32 +49,34 @@
     </div>
   </section>
 
-  <section class="pets" id="our-friends">
-    <h2 class="pets__title">Our friends who are&nbsp;looking for a house</h2>
-    <ul class="pets__list">
-      <li class="pets__card">
-        <img src="../../assets/images/pets-katrine.png" alt="pet" class="pets__card-img">
-        <h3 class="pets__card-name">Katrine</h3>
-        <button class="pets__card-more">Learn more</button>
-      </li>
-      <li class="pets__card">
-        <img src="../../assets/images/pets-jennifer.png" alt="pet" class="pets__card-img">
-        <h3 class="pets__card-name">Jennifer</h3>
-        <button class="pets__card-more">Learn more</button>
-      </li>
-      <li class="pets__card">
-        <img src="../../assets/images/pets-woody.png" alt="pet" class="pets__card-img">
-        <h3 class="pets__card-name">Woody</h3>
-        <button class="pets__card-more">Learn more</button>
-      </li>
-    </ul>
-    <button class="pets__last">
-      <div class="pets__last-icon"></div>
-    </button>
-    <button class="pets__next">
-      <div class="pets__next-icon"></div>
-    </button>
-    <button class="pets__get">Get to know the rest</button>
+  <section class="our-friends" id="our-friends">
+    <h2 class="our-friends__title">Our friends who are&nbsp;looking for a house</h2>
+    <div class="our-friends__container">
+      <ul class="our-friends__list">
+        <li class="our-friends__card">
+          <img src="../../assets/images/pets-katrine.png" alt="pet" class="our-friends__card-img">
+          <h3 class="our-friends__card-name">Katrine</h3>
+          <button class="our-friends__card-more">Learn more</button>
+        </li>
+        <li class="our-friends__card">
+          <img src="../../assets/images/pets-jennifer.png" alt="pet" class="our-friends__card-img">
+          <h3 class="our-friends__card-name">Jennifer</h3>
+          <button class="our-friends__card-more">Learn more</button>
+        </li>
+        <li class="our-friends__card">
+          <img src="../../assets/images/pets-woody.png" alt="pet" class="our-friends__card-img">
+          <h3 class="our-friends__card-name">Woody</h3>
+          <button class="our-friends__card-more">Learn more</button>
+        </li>
+      </ul>
+      <button class="our-friends__last">
+        <div class="our-friends__last-icon"></div>
+      </button>
+      <button class="our-friends__next">
+        <div class="our-friends__next-icon"></div>
+      </button>
+    </div>
+    <button class="our-friends__get">Get to know the rest</button>
   </section>
 
   <section class="help" id="help">
@@ -117,47 +121,49 @@
     </ul>
   </section>
 
-  <section class="donation">
-    <img src="../../assets/images/donation-dog.png" alt="dog" class="donation__image">
-    <div class="donation__content">
-      <h2 class="donation__title">You can also make a donation</h2>
-      <p class="donation__subtitle">Name of the bank / Type of bank account</p>
-      <a class="donation__link">
-        <button class="donation__card">
-          <div class="donation__icon"></div>
-          <span class="donation__number">8380 2880 8028 8791 7435</span>
+  <section class="in-addition">
+    <img src="../../assets/images/donation-dog.png" alt="dog" class="in-addition__image">
+    <div class="in-addition__content">
+      <h2 class="in-addition__title">You can also make a donation</h2>
+      <p class="in-addition__subtitle">Name of the bank / Type of bank account</p>
+      <a class="in-addition__link">
+        <button class="in-addition__card">
+          <div class="in-addition__icon"></div>
+          <span class="in-addition__number">8380 2880 8028 8791 7435</span>
         </button>
       </a>
-      <p class="donation__text">Legal information and lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+      <p class="in-addition__text">Legal information and lorem ipsum dolor sit amet, consectetur adipiscing elit. 
         Maecenas a ipsum at libero sagittis dignissim sed ac diam. Praesent ultrices maximus tortor et vulputate. 
         Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
     </div>
   </section>
 
   <footer class="footer" id="footer">
-    <div class="footer__contact">
-      <h2 class="footer__title">For questions and suggestions</h2>
-      <a class="footer__contact-link" target="_blanck" href="mailto:email@shelter.com">
-        <img class="footer__icon-email" src="../../assets/icons/mail.svg" alt="email">
-        <span class="footer__text">email@shelter.com</span>
-      </a>
-      <a class="footer__contact-link" target="_blanck" href="tel:+136745677554">
-        <img class="footer__icon-phone" src="../../assets/icons/phone.svg" alt="phone">      
-        <span class="footer__text">+13 674 567 75 54</span>
-      </a>
+    <div class="footer__container">
+      <div class="footer__contact">
+        <h2 class="footer__title">For questions and suggestions</h2>
+        <a class="footer__contact-link" target="_blanck" href="mailto:email@shelter.com">
+          <img class="footer__icon-email" src="../../assets/icons/mail.svg" alt="email">
+          <span class="footer__text">email@shelter.com</span>
+        </a>
+        <a class="footer__contact-link" target="_blanck" href="tel:+136745677554">
+          <img class="footer__icon-phone" src="../../assets/icons/phone.svg" alt="phone">      
+          <span class="footer__text">+13 674 567 75 54</span>
+        </a>
+      </div>
+      <div class="footer__address">
+        <h2 class="footer__title">We are waiting for&nbsp;your visit</h2>
+        <a class="footer__address-link" target="_blanck" href="https://www.google.com/maps/place/1+Central+St,+Boston,+MA+02109,+USA/@42.3585558,-71.0569203,17z/data=!3m1!4b1!4m5!3m4!1s0x89e370868bc2ce7b:0x82fa7db94f5fea9e!8m2!3d42.3585519!4d-71.0547263?hl=en">
+          <img class="footer__icon-place" src="../../assets/icons/pin.svg" alt="email">
+          <span class="footer__text">1 Central Street, Boston (entrance from the store)</span>
+        </a>
+        <a class="footer__address-link" target="_blanck" href="https://www.google.com/maps/place/South+Park/@51.4691953,-0.4743459,11z/data=!4m14!1m7!3m6!1s0x487608baa7401b31:0x18e66d9fcd2f7d77!2sSouth+Park+Court,+18+S+Park+Rd,+London+SW19+8TD,+UK!3b1!8m2!3d51.4202685!4d-0.2001799!3m5!1s0x48760f79376fa0e3:0x202ac3af5c1ea4ec!8m2!3d51.4691953!4d-0.1941945!15sChUxOCBTb3V0aCBQYXJrLCBMb25kb25aFiIUMTggc291dGggcGFyayBsb25kb26SAQRwYXJrmgEjQ2haRFNVaE5NRzluUzBWSlEwRm5TVVJYY0hGaFNWWjNFQUU?hl=en">
+          <img class="footer__icon-place" src="../../assets/icons/pin.svg" alt="telephone">
+          <span class="footer__text">18 South Park, London</span>
+        </a>
+      </div>
+      <img src="../../assets/images/footer-puppy.png" alt="dog" class="footer__image">
     </div>
-    <div class="footer__address">
-      <h2 class="footer__title">We are waiting for&nbsp;your visit</h2>
-      <a class="footer__address-link" target="_blanck" href="https://www.google.com/maps/place/1+Central+St,+Boston,+MA+02109,+USA/@42.3585558,-71.0569203,17z/data=!3m1!4b1!4m5!3m4!1s0x89e370868bc2ce7b:0x82fa7db94f5fea9e!8m2!3d42.3585519!4d-71.0547263?hl=en">
-        <img class="footer__icon-place" src="../../assets/icons/pin.svg" alt="email">
-        <span class="footer__text">1 Central Street, Boston (entrance from the store)</span>
-      </a>
-      <a class="footer__address-link" target="_blanck" href="https://www.google.com/maps/place/South+Park/@51.4691953,-0.4743459,11z/data=!4m14!1m7!3m6!1s0x487608baa7401b31:0x18e66d9fcd2f7d77!2sSouth+Park+Court,+18+S+Park+Rd,+London+SW19+8TD,+UK!3b1!8m2!3d51.4202685!4d-0.2001799!3m5!1s0x48760f79376fa0e3:0x202ac3af5c1ea4ec!8m2!3d51.4691953!4d-0.1941945!15sChUxOCBTb3V0aCBQYXJrLCBMb25kb25aFiIUMTggc291dGggcGFyayBsb25kb26SAQRwYXJrmgEjQ2haRFNVaE5NRzluUzBWSlEwRm5TVVJYY0hGaFNWWjNFQUU?hl=en">
-        <img class="footer__icon-place" src="../../assets/icons/pin.svg" alt="telephone">
-        <span class="footer__text">18 South Park, London</span>
-      </a>
-    </div>
-    <img src="../../assets/images/footer-puppy.png" alt="dog" class="footer__image">
   </footer>
 
 
