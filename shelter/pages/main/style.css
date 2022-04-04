@@ -42,10 +42,13 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-.header .header__text {
+.header .header__logo {
+  text-decoration: none;
+}
+.header .header__logo .header__text {
   max-width: 187px;
 }
-.header .header__text .header__title {
+.header .header__logo .header__text .header__title {
   margin: 0;
   color: #F1CDB3;
   font-family: "Georgia";
@@ -55,7 +58,7 @@
   line-height: 110%;
   letter-spacing: 0.06em;
 }
-.header .header__text .header__subtitle {
+.header .header__logo .header__text .header__subtitle {
   margin: 10px 0 0 4px;
   color: #FFFFFF;
   font-family: "Arial";
@@ -94,10 +97,11 @@
   color: #FAFAFA;
 }
 .header .header__nav .header__link_active {
+  color: #FAFAFA;
   border-bottom: 3px solid #F1CDB3;
 }
 .header .header__nav .header__link_active:hover {
-  color: #CDCDCD;
+  color: #FAFAFA;
 }
 
 .not-only {
@@ -370,7 +374,10 @@
   background: url(../../assets/icons/next.svg) no-repeat;
   background-size: cover;
 }
-.our-friends .our-friends__get {
+.our-friends .our-friends__link {
+  margin: 0 auto;
+}
+.our-friends .our-friends__link .our-friends__get {
   padding: 0;
   margin: 60px auto 100px;
   width: 261px;
@@ -389,7 +396,7 @@
   transition: all 0.5s ease;
   cursor: pointer;
 }
-.our-friends .our-friends__get:hover {
+.our-friends .our-friends__link .our-friends__get:hover {
   background-color: #FDDCC4;
   border: none;
 }
