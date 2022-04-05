@@ -144,10 +144,14 @@
   font-size: 15px;
   line-height: 160%;
 }
-.not-only .not-only__container .not-only__button {
+.not-only .not-only__container .not-only__link {
   width: 207px;
   height: 52px;
   margin: 41px 0 244px 40px;
+}
+.not-only .not-only__container .not-only__link .not-only__button {
+  width: 100%;
+  height: 100%;
   padding: 0;
   background-color: #F1CDB3;
   border-radius: 100px;
@@ -163,7 +167,7 @@
   letter-spacing: 0.06em;
   cursor: pointer;
 }
-.not-only .not-only__container .not-only__button:hover {
+.not-only .not-only__container .not-only__link .not-only__button:hover {
   background-color: #FDDCC4;
 }
 .not-only .not-only__container .not-only__img {
@@ -316,6 +320,7 @@
   color: #292929;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
+  cursor: pointer;
 }
 .our-friends .our-friends__container .our-friends__list .our-friends__card:last-child {
   margin-right: 0px;

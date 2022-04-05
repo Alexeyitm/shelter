@@ -125,26 +125,30 @@
       font-size: 15px;
       line-height: 160%;
     }
-    .not-only__button {
+    .not-only__link {
       width: 207px;
       height: 52px;
       margin: 41px 0 244px 40px;
-      padding: 0;
-      background-color: #F1CDB3;
-      border-radius: 100px;
-      border: 0;
-      transition: all .5s ease;
-      color: #292929;
-      font-family: "Georgia";
-      font-style: normal;
-      font-weight: 400;
-      font-size: 17px;
-      line-height: 130%;
-      letter-spacing: 0.06em;
-      cursor: pointer;
-      &:hover {
-        background-color: #FDDCC4;
-      }
+      .not-only__button {
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        background-color: #F1CDB3;
+        border-radius: 100px;
+        border: 0;
+        transition: all .5s ease;
+        color: #292929;
+        font-family: "Georgia";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 17px;
+        line-height: 130%;
+        letter-spacing: 0.06em;
+        cursor: pointer;
+        &:hover {
+          background-color: #FDDCC4;
+        }
+      } 
     }
     .not-only__img {
       width: 698px;
@@ -270,6 +274,7 @@
           letter-spacing: 0.06em;
           color: #292929;
           transition: all .5s ease;
+          cursor: pointer;
         }
       }
       .our-friends__card:last-child {
