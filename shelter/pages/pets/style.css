@@ -232,7 +232,6 @@
           box-sizing: border-box;
   border-radius: 100px;
   color: #CDCDCD;
-  cursor: pointer;
 }
 .our-friends .our-friends__navigation .our-friends__link .our-friends__button_count {
   background: #F1CDB3;
@@ -242,6 +241,7 @@
   color: #292929;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
+  cursor: pointer;
 }
 .our-friends .our-friends__navigation .our-friends__link .our-friends__button_count:hover {
   background: #FDDCC4;
@@ -254,6 +254,7 @@
   color: #292929;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
+  cursor: pointer;
 }
 .our-friends .our-friends__navigation .our-friends__link .our-friends__button_active:hover {
   background: #FDDCC4;

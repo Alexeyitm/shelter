@@ -196,7 +196,6 @@
         box-sizing: border-box;
         border-radius: 100px;
         color: #CDCDCD;
-        cursor: pointer;
       }
       .our-friends__button_count {
         background: #F1CDB3;
@@ -204,6 +203,7 @@
         box-sizing: border-box;
         color: #292929;
         transition: all .5s ease;
+        cursor: pointer;
         &:hover {
           background: #FDDCC4;
           border-color: #FDDCC4;
@@ -214,6 +214,7 @@
         box-sizing: border-box;
         color: #292929;
         transition: all .5s ease;
+        cursor: pointer;
         &:hover {
           background: #FDDCC4;
           border-color: #FDDCC4;
