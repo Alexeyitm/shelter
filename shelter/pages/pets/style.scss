@@ -218,19 +218,35 @@
 .footer {
   width: 100%;
   background: url(../../assets/images/footer-gradient-background.png) no-repeat;
-  background-size: 100%;
+  background-size: 100% 100%;
   .footer__container {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     max-width: 1200px;
     margin: 0 auto;
+    @media screen and (min-width: 768px) and (max-width: 1280px) {
+      max-width: calc(708px + (1200 - 708) * (100vw - 768px) / (1280 - 768));
+    }
+    @media screen and (min-width: 320px) and (max-width: 768px) {
+      max-width: calc(300px + (708 - 300) * (100vw - 320px) / (768 - 320));
+    }
     .footer__contact {
       margin: 56px 0 0;
       max-width: 280px;
-      max-height: 234px;
+      height: 234px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      @media screen and (min-width: 768px) and (max-width: 1280px) {
+        margin-top: calc(30px + (56 - 30) * (100vw - 768px) / (1280 - 768));
+      }
+      @media screen and (min-width: 320px) and (max-width: 768px) {
+        height: calc(208px + (234 - 208) * (100vw - 320px) / (768 - 320));
+      }
+      @media screen and (max-width: 629px) {
+        margin: 30px auto 0
+      }
       .footer__title {
         margin: 0;
         font-family: "Georgia";
@@ -240,6 +256,12 @@
         line-height: 130%;
         letter-spacing: 0.06em;
         color: #FFFFFF;
+        @media screen and (min-width: 320px) and (max-width: 768px) {
+          font-size: calc(25px + (35 - 25) * (100vw - 320px) / (768 - 320));
+        }
+        @media screen and (max-width: 767px) {
+          text-align: center;
+        }
       }
       .footer__contact-link {
         display: flex;
@@ -248,7 +270,10 @@
         transition: all .5s ease;
         &:hover {
           opacity: .5;
-        } 
+        }
+        @media screen and (max-width: 767px) {
+          margin: 0 auto;
+        }
         .footer__icon-email {
           width: 40px;
           height: 26px;
@@ -271,18 +296,34 @@
     .footer__address {
       margin: 56px 0 0;
       max-width: 302px;
-      max-height: 234px;
+      height: 234px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      @media screen and (min-width: 768px) and (max-width: 1280px) {
+        margin-top: calc(30px + (56 - 30) * (100vw - 768px) / (1280 - 768));
+      }
+      @media screen and (min-width: 320px) and (max-width: 768px) {
+        height: calc(222px + (234 - 222) * (100vw - 320px) / (768 - 320));
+      }
+      @media screen and (max-width: 629px) {
+        margin: 40px auto 0;
+      }
       .footer__title {
-        margin: 0;
+        margin: 0 auto;
+        max-width: 270px;
         font-style: normal;
         font-weight: 400;
         font-size: 35px;
         line-height: 130%;
         letter-spacing: 0.06em;
         color: #FFFFFF;
+        @media screen and (min-width: 320px) and (max-width: 768px) {
+          font-size: calc(25px + (35 - 25) * (100vw - 320px) / (768 - 320));
+        }
+        @media screen and (max-width: 767px) {
+          text-align: center;
+        }
       }
       .footer__address-link {
         text-decoration: none;
@@ -312,6 +353,13 @@
       margin: 40px 0 0;
       width: 300px;
       height: 310px;
+      @media screen and (max-width: 949px) {
+        margin: 65px auto 0;
+      }
+      @media screen and (min-width: 320px) and (max-width: 768px) {
+        width: calc(260px + (300 - 260) * (100vw - 320px) / (768 - 320));
+        height: calc(269px + (310 - 269) * (100vw - 320px) / (768 - 320));
+      }
     }
   }  
 }
