@@ -253,7 +253,7 @@
 .footer {
   width: 100%;
   background: url(../../assets/images/footer-gradient-background.png) no-repeat;
-  background-size: 100%;
+  background-size: 100% 100%;
 }
 .footer .footer__container {
   display: -webkit-box;
@@ -262,13 +262,25 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   max-width: 1200px;
   margin: 0 auto;
+}
+@media screen and (min-width: 768px) and (max-width: 1280px) {
+  .footer .footer__container {
+    max-width: calc(708px + (1200 - 708) * (100vw - 768px) / (1280 - 768));
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  .footer .footer__container {
+    max-width: calc(300px + (708 - 300) * (100vw - 320px) / (768 - 320));
+  }
 }
 .footer .footer__container .footer__contact {
   margin: 56px 0 0;
   max-width: 280px;
-  max-height: 234px;
+  height: 234px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -280,6 +292,21 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
+@media screen and (min-width: 768px) and (max-width: 1280px) {
+  .footer .footer__container .footer__contact {
+    margin-top: calc(30px + (56 - 30) * (100vw - 768px) / (1280 - 768));
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  .footer .footer__container .footer__contact {
+    height: calc(208px + (234 - 208) * (100vw - 320px) / (768 - 320));
+  }
+}
+@media screen and (max-width: 629px) {
+  .footer .footer__container .footer__contact {
+    margin: 30px auto 0;
+  }
+}
 .footer .footer__container .footer__contact .footer__title {
   margin: 0;
   font-family: "Georgia";
@@ -289,6 +316,16 @@
   line-height: 130%;
   letter-spacing: 0.06em;
   color: #FFFFFF;
+}
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  .footer .footer__container .footer__contact .footer__title {
+    font-size: calc(25px + (35 - 25) * (100vw - 320px) / (768 - 320));
+  }
+}
+@media screen and (max-width: 767px) {
+  .footer .footer__container .footer__contact .footer__title {
+    text-align: center;
+  }
 }
 .footer .footer__container .footer__contact .footer__contact-link {
   display: -webkit-box;
@@ -303,6 +340,11 @@
 }
 .footer .footer__container .footer__contact .footer__contact-link:hover {
   opacity: 0.5;
+}
+@media screen and (max-width: 767px) {
+  .footer .footer__container .footer__contact .footer__contact-link {
+    margin: 0 auto;
+  }
 }
 .footer .footer__container .footer__contact .footer__contact-link .footer__icon-email {
   width: 40px;
@@ -324,7 +366,7 @@
 .footer .footer__container .footer__address {
   margin: 56px 0 0;
   max-width: 302px;
-  max-height: 234px;
+  height: 234px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -336,14 +378,40 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
+@media screen and (min-width: 768px) and (max-width: 1280px) {
+  .footer .footer__container .footer__address {
+    margin-top: calc(30px + (56 - 30) * (100vw - 768px) / (1280 - 768));
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  .footer .footer__container .footer__address {
+    height: calc(222px + (234 - 222) * (100vw - 320px) / (768 - 320));
+  }
+}
+@media screen and (max-width: 629px) {
+  .footer .footer__container .footer__address {
+    margin: 40px auto 0;
+  }
+}
 .footer .footer__container .footer__address .footer__title {
-  margin: 0;
+  margin: 0 auto;
+  max-width: 270px;
   font-style: normal;
   font-weight: 400;
   font-size: 35px;
   line-height: 130%;
   letter-spacing: 0.06em;
   color: #FFFFFF;
+}
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  .footer .footer__container .footer__address .footer__title {
+    font-size: calc(25px + (35 - 25) * (100vw - 320px) / (768 - 320));
+  }
+}
+@media screen and (max-width: 767px) {
+  .footer .footer__container .footer__address .footer__title {
+    text-align: center;
+  }
 }
 .footer .footer__container .footer__address .footer__address-link {
   text-decoration: none;
@@ -377,4 +445,15 @@
   margin: 40px 0 0;
   width: 300px;
   height: 310px;
+}
+@media screen and (max-width: 949px) {
+  .footer .footer__container .footer__image {
+    margin: 65px auto 0;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  .footer .footer__container .footer__image {
+    width: calc(260px + (300 - 260) * (100vw - 320px) / (768 - 320));
+    height: calc(269px + (310 - 269) * (100vw - 320px) / (768 - 320));
+  }
 }
