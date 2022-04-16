@@ -122,9 +122,6 @@
     @media screen and (max-width: 767px) {
       display: block;
     }
-    &:checked {
-      background-image: url(../../assets/images/burger-pets.png);
-    }
   }
 }
 
@@ -369,6 +366,7 @@
           .our-friends__card-more {
             background-color: #FDDCC4;
             border: none;
+            box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
           }
         }
         &:last-child {
@@ -542,6 +540,7 @@
     }
   }
   .help__list {
+    max-width: 1250px;
     margin: 57px auto 100px;
     padding: 0;
     list-style-type: none;
