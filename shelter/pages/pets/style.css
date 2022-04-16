@@ -138,6 +138,21 @@
 .header .header__container .header__nav .header__link_active:hover {
   color: #292929;
 }
+.header .header__container .header__burger {
+  width: 30px;
+  height: 22px;
+  padding: 0;
+  margin: 19px 43px 0 0;
+  border: 0;
+  background-image: url(../../assets/images/burger-pets.png);
+  background-color: #FFFFFF;
+  display: none;
+}
+@media screen and (max-width: 767px) {
+  .header .header__container .header__burger {
+    display: block;
+  }
+}
 
 .our-friends {
   margin-top: 120px;

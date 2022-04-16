@@ -135,6 +135,24 @@
 .header .header__nav .header__link_active:hover {
   color: #FAFAFA;
 }
+.header .header__burger {
+  width: 30px;
+  height: 22px;
+  padding: 0;
+  margin: 19px 43px 0 0;
+  border: 0;
+  background-image: url(../../assets/images/burger-main.png);
+  background-color: inherit;
+  display: none;
+}
+@media screen and (max-width: 767px) {
+  .header .header__burger {
+    display: block;
+  }
+}
+.header .header__burger:checked {
+  background-image: url(../../assets/images/burger-pets.png);
+}
 
 .not-only {
   width: 100%;

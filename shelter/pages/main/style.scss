@@ -110,6 +110,22 @@
       }  
     }  
   }
+  .header__burger {
+    width: 30px;
+    height: 22px;
+    padding: 0;
+    margin: 19px 43px 0 0;
+    border: 0;
+    background-image: url(../../assets/images/burger-main.png);
+    background-color: inherit;
+    display: none;
+    @media screen and (max-width: 767px) {
+      display: block;
+    }
+    &:checked {
+      background-image: url(../../assets/images/burger-pets.png);
+    }
+  }
 }
 
 
