@@ -39,6 +39,24 @@
     margin: 30px auto 30px;
     display: flex;
     justify-content: space-between;
+    display: flex;
+    box-sizing: border-box;
+    @media screen and (min-width: 768px) and (max-width: 1280px) {
+      max-width: calc(708px + (1200 - 708) * (100vw - 768px) / (1280 - 768));
+    }
+    @media screen and (min-width: 320px) and (max-width: 767px) {
+      margin-top: 30px;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    @media screen and (min-width: 375px) and (max-width: 768px) {
+      max-width: calc(320px + (708 - 320) * (100vw - 375px) / (768 - 375));
+    }
+    @media screen and (max-width: 375px) {
+      max-width: 320px;
+      right: 0;
+      left: auto;
+    }
     .header__logo {
       text-decoration: none;
       .header__text {
@@ -70,6 +88,9 @@
       display: flex;
       align-items: flex-start;
       justify-content: space-between;
+      @media screen and (max-width: 767px) {
+        display: none;
+      }
       .header__link {
         margin-top: 16px;
         color: #545454;
@@ -112,11 +133,26 @@
     letter-spacing: 0.06em;
     color: #545454;
     text-align: center;
+    @media screen and (min-width: 320px) and (max-width: 768px) {
+      max-width: calc(300px + (400 - 300) * (100vw - 320px) / (768 - 320));
+      font-size: calc(25px + (35 - 25) * (100vw - 320px) / (768 - 320));
+      margin-top: calc(42px + (80 - 42) * (100vw - 320px) / (768 - 320));
+    }
   }
   .our-friends__container {
     width: 1200px;
     margin: 60px auto 60px;
+    @media screen and (min-width: 768px) and (max-width: 1280px) {
+      width: calc(580px + (1200 - 580) * (100vw - 768px) / (1280 - 768));
+      margin: calc(30px + (60 - 30) * (100vw - 768px) / (1280 - 768)) auto calc(40px + (60 - 40) * (100vw - 768px) / (1280 - 768));
+    }
+    @media screen and (min-width: 320px) and (max-width: 768px) {
+      width: calc(270px + (580 - 270) * (100vw - 320px) / (768 - 320));
+      margin: calc(42px + (30 - 42) * (100vw - 320px) / (768 - 320)) auto calc(42px + (40 - 42) * (100vw - 320px) / (768 - 320));
+    }
     .our-friends__list {
+      display: flex;
+      justify-content: center;
       list-style-type: none;
       margin: 0;
       padding: 0;
@@ -135,6 +171,16 @@
           .our-friends__card-more {
             background-color: #FDDCC4;
             border: none;
+          }
+        }
+        @media screen and (max-width: 1279px) {
+          &:nth-child(7), &:nth-child(8) {
+            display: none;
+          }
+        }
+        @media screen and (max-width: 767px) {
+          &:nth-child(4), &:nth-child(5), &:nth-child(6) {
+            display: none;
           }
         }
         .our-friends__card-name {
@@ -177,6 +223,13 @@
     height: 52px;
     display: flex;
     justify-content: space-between;
+    @media screen and (min-width: 768px) and (max-width: 1280px) {
+      margin-bottom: calc(76px + (100 - 76) * (100vw - 768px) / (1280 - 768));
+    }
+    @media screen and (min-width: 320px) and (max-width: 768px) {
+      width: calc(300px + (340 - 300) * (100vw - 320px) / (768 - 320));
+      margin-bottom: calc(42px + (76 - 42) * (100vw - 320px) / (768 - 320));
+    }
     .our-friends__button {
       width: 52px;
       height: 52px;
@@ -226,10 +279,10 @@
     max-width: 1200px;
     margin: 0 auto;
     @media screen and (min-width: 768px) and (max-width: 1280px) {
-      max-width: calc(708px + (1200 - 708) * (100vw - 768px) / (1280 - 768));
+      max-width: calc(640px + (1200 - 640) * (100vw - 768px) / (1280 - 768));
     }
     @media screen and (min-width: 320px) and (max-width: 768px) {
-      max-width: calc(300px + (708 - 300) * (100vw - 320px) / (768 - 320));
+      max-width: calc(300px + (640 - 300) * (100vw - 320px) / (768 - 320));
     }
     .footer__contact {
       margin: 56px 0 0;
@@ -283,6 +336,7 @@
           height: 32px;
         }
         .footer__text {
+          font-family: "Georgia";
           font-style: normal;
           font-weight: 400;
           font-size: 20px;
@@ -310,7 +364,8 @@
         margin: 40px auto 0;
       }
       .footer__title {
-        margin: 0 auto;
+        font-family: "Georgia";
+        margin: 0;
         max-width: 270px;
         font-style: normal;
         font-weight: 400;
@@ -323,6 +378,7 @@
         }
         @media screen and (max-width: 767px) {
           text-align: center;
+          margin: 0 auto;
         }
       }
       .footer__address-link {
@@ -359,6 +415,7 @@
       @media screen and (min-width: 320px) and (max-width: 768px) {
         width: calc(260px + (300 - 260) * (100vw - 320px) / (768 - 320));
         height: calc(269px + (310 - 269) * (100vw - 320px) / (768 - 320));
+        margin: calc(41px + (65 - 41) * (100vw - 320px) / (768 - 320)) auto 0;
       }
     }
   }  
