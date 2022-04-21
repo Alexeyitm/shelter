@@ -25,7 +25,6 @@
       <a class="header__link" href="#help">Help the shelter</a>
       <a class="header__link" href="#footer">Contacts</a>
     </nav>
-    <button class="header__burger"></button>
   </header>
 
   <section class="not-only">
@@ -59,18 +58,18 @@
     <div class="our-friends__container">
       <ul class="our-friends__list">
         <li class="our-friends__card">
-          <img src="../../assets/images/pets-katrine.png" alt="pet" class="our-friends__card-img">
-          <h3 class="our-friends__card-name">Katrine</h3>
+          <img src="" alt="" class="our-friends__card-img">
+          <h3 class="our-friends__card-name"></h3>
           <button class="our-friends__card-more">Learn more</button>
         </li>
         <li class="our-friends__card">
-          <img src="../../assets/images/pets-jennifer.png" alt="pet" class="our-friends__card-img">
-          <h3 class="our-friends__card-name">Jennifer</h3>
+          <img src="" alt="" class="our-friends__card-img">
+          <h3 class="our-friends__card-name"></h3>
           <button class="our-friends__card-more">Learn more</button>
         </li>
         <li class="our-friends__card">
-          <img src="../../assets/images/pets-woody.png" alt="pet" class="our-friends__card-img">
-          <h3 class="our-friends__card-name">Woody</h3>
+          <img src="" alt="" class="our-friends__card-img">
+          <h3 class="our-friends__card-name"></h3>
           <button class="our-friends__card-more">Learn more</button>
         </li>
       </ul>
@@ -173,5 +172,49 @@
     </div>
   </footer>
 
+  <div class="popup">
+    <div class="popup__overlay">
+      <div class="popup__container">
+        <button class="popup__button-close"><div class="popup__button-icone"></div></button>
+        <img src="../../assets/images/pets-jennifer.png" alt="" class="popup__img">
+        <div class="popup__content">
+          <h2 class="popup__title">Jennifer</h2>
+          <p class="popup_subtitle">Dog - Labrador</p>
+          <p class="popup_paragraph">Jennifer is a sweet 2 months old Labrador that is patiently waiting to find a new forever home. This girl really enjoys being able to go outside to run and play, but won't hesitate to play up a storm in the house if she has all of her favorite toys.</p>
+          <ul class="popup__list">
+            <li class="popup__element"><span class="popup__element-property">Age: </span><span class="popup__element-value popup__element-value_age">2 months</span></li>
+            <li class="popup__element"><span class="popup__element-property">Inoculations: </span><span class="popup__element-value popup__element-value_inoculations">none</span></li>
+            <li class="popup__element"><span class="popup__element-property">Diseases: </span><span class="popup__element-value popup__element-value_diseases">none</span></li>
+            <li class="popup__element"><span class="popup__element-property">Parasites: </span><span class="popup__element-value popup__element-value_parasites">none</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="burger">
+    <div class="burger__menu">
+      <div class="burger__logo">
+        <div class="burger__text">
+          <h1 class="burger__title">Cozy House</h1>
+          <p class="burger__subtitle">Shelter for pets in Boston</p>
+        </div>
+      </div>
+      <nav class="burger__list">
+        <a class="burger__link burger__link_active" href="#">About the shelter</a>
+        <a class="burger__link" href="../pets/index.html">Our pets</a>
+        <a class="burger__link" href="#help">Help the shelter</a>
+        <a class="burger__link" href="#footer">Contacts</a>
+      </nav>
+    </div>
+  </div>
+
+  <button class="button-burger"></button>
+
+  <script type="module" src="./scripts/contain.js"></script>
+  <script type="module" src="./scripts/variables.js"></script>
+  <script type="module" src="./scripts/index.js"></script>
+  <script type="module" src="./scripts/popup-hover.js"></script>
+  <script type="module" src="./scripts/burger.js"></script>
 </body>
 </html>
