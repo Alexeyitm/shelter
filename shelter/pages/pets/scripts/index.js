@@ -2,14 +2,35 @@ import { pets } from './contain.js';
 import { page, petCard, closePopupButton, popup, popupOverlay, popupContainer, firstButton, previousButton, count, nextButton, lastButton } from './variables.js';
 import { popupHover } from './popup-hover.js'
 
+//create array with 48 cards;
+const bigContainer = [];
+for (let i = 0; i < 6; i++) {
+  pets.forEach((card) => bigContainer.push(card))
+}
 
 //function create cards
 const createCard = (cards, pets) => {
   let i = 0;
-  cards.forEach(card => {
-    addCard(card, i, pets);
-    i += 1;
-  });
+  //cards.forEach(card => {
+  //  addCard(card, i, pets);
+  //  i += 1;
+  //});
+
+  if (document.documentElement.clientWidth >= 1280) {
+    for (let i = 0; i < 8; i++) {
+      addCard(cards[i], i, pets);
+    }
+  }
+  if (document.documentElement.clientWidth < 1280 && document.documentElement.clientWidth >= 768) {
+    for (let i = 0; i < 6; i++) {
+      addCard(cards[i], i, pets);
+    }
+  }
+  if (document.documentElement.clientWidth < 768) {
+    for (let i = 0; i < 3; i++) {
+      addCard(cards[i], i, pets);
+    }
+  }
 }
 
 //function add card
@@ -51,29 +72,70 @@ const addCard = (card, i, pets) => {
 }
 
 
-//function change cards
-const generateCards = () => {
-  const bigContainer = [pets];
-  
-  for (let i = 1; i < 8; i++) {
-    bigContainer.push((Array.from(pets).slice(i, pets.length)).concat(Array.from(pets).slice(0, i)));
+// functions generate page cards
+const generateEightCards = () => {
+  const eightCardsContainer = [bigContainer.slice(0, 8)];
+  for (let i = 1; i < 6; i++) {
+    eightCardsContainer.push(bigContainer.slice(i, 8+i));
   }
-
-  return bigContainer;
+  return eightCardsContainer;
 }
+console.log(generateEightCards())
+
+const generateSixCards = () => {
+  const sixCardsContainer = [bigContainer.slice(0, 6)];
+  for (let i = 1; i < 8; i++) {
+    sixCardsContainer.push(bigContainer.slice(i, 6+i));
+  }
+  return sixCardsContainer;
+}
+console.log(generateSixCards())
+
+const generateThreeCards = () => {
+  const threeCardsContainer = [bigContainer.slice(0, 3)];
+  for (let i = 1; i < 16; i++) {
+    threeCardsContainer.push(bigContainer.slice(i, 3+i));
+  }
+  return threeCardsContainer;
+}
+console.log(generateThreeCards())
+
+
+
+
 
 firstButton.addEventListener('click', () => {
-  createCard(petCard, generateCards()[0]);
-  count.textContent = 1;
+  if (document.documentElement.clientWidth >= 1280) {
+    count.textContent = '1';
+    createCard(petCard, generateEightCards()[0]);
+  }
+  if (document.documentElement.clientWidth < 1280 && document.documentElement.clientWidth >= 768) {
+    count.textContent = '1';
+    createCard(petCard, generateSixCards()[0]);
+  }
+  if (document.documentElement.clientWidth < 768) {
+    count.textContent = '1';
+    createCard(petCard, generateThreeCards()[0]);
+  }
   firstButton.classList.remove('our-friends__button_active');
   lastButton.classList.add('our-friends__button_active');
   nextButton.classList.add('our-friends__button_active');
   previousButton.classList.remove('our-friends__button_active');
 })
+
 previousButton.addEventListener('click', () => {
   if (count.textContent > 1) {
     count.textContent = +count.textContent - 1;
-    createCard(petCard, generateCards()[+count.textContent-1]);
+    
+    if (document.documentElement.clientWidth >= 1280) {
+      createCard(petCard, generateEightCards()[+count.textContent-1])
+    }
+    if (document.documentElement.clientWidth < 1280 && document.documentElement.clientWidth >= 768) {
+      createCard(petCard, generateSixCards()[+count.textContent-1])
+    }
+    if (document.documentElement.clientWidth < 768) {
+      createCard(petCard, generateThreeCards()[+count.textContent-1]) 
+    }
     nextButton.classList.add('our-friends__button_active');
     lastButton.classList.add('our-friends__button_active');
   }
@@ -84,25 +146,63 @@ previousButton.addEventListener('click', () => {
 })
 
 nextButton.addEventListener('click', () => {
-  if (count.textContent < 8) {
-    count.textContent = +count.textContent + 1;
-    createCard(petCard, generateCards()[+count.textContent-1]);
-    firstButton.classList.add('our-friends__button_active');
-    previousButton.classList.add('our-friends__button_active');
+  
+  if (document.documentElement.clientWidth >= 1280) {
+    if (count.textContent < 6) {
+      count.textContent = +count.textContent + 1;
+      createCard(petCard, generateEightCards()[+count.textContent-1]);
+      firstButton.classList.add('our-friends__button_active');
+      previousButton.classList.add('our-friends__button_active');
+    }
+    if (count.textContent == 6) {
+      nextButton.classList.remove('our-friends__button_active');
+      lastButton.classList.remove('our-friends__button_active');
+    }
   }
-  if (count.textContent == 8) {
-    nextButton.classList.remove('our-friends__button_active');
-    lastButton.classList.remove('our-friends__button_active');
+  if (document.documentElement.clientWidth < 1280 && document.documentElement.clientWidth >= 768) {
+    if (count.textContent < 8) {
+      count.textContent = +count.textContent + 1;
+      createCard(petCard, generateSixCards()[+count.textContent-1]);
+      firstButton.classList.add('our-friends__button_active');
+      previousButton.classList.add('our-friends__button_active');
+    }
+    if (count.textContent == 8) {
+      nextButton.classList.remove('our-friends__button_active');
+      lastButton.classList.remove('our-friends__button_active');
+    }
+  }
+  if (document.documentElement.clientWidth < 768) {
+    if (count.textContent < 16) {
+      count.textContent = +count.textContent + 1;
+      createCard(petCard, generateThreeCards()[+count.textContent-1]);
+      firstButton.classList.add('our-friends__button_active');
+      previousButton.classList.add('our-friends__button_active');
+    } 
+    if (count.textContent == 16) {
+      nextButton.classList.remove('our-friends__button_active');
+      lastButton.classList.remove('our-friends__button_active');
+    }
   }
 })
+
 lastButton.addEventListener('click', () => {
-  createCard(petCard, generateCards()[7]);
-  count.textContent = 8;
+  if (document.documentElement.clientWidth >= 1280) {
+    count.textContent = '6';
+    createCard(petCard, generateEightCards()[5]);
+  }
+  if (document.documentElement.clientWidth < 1280 && document.documentElement.clientWidth >= 768) {
+    count.textContent = '8';
+    createCard(petCard, generateSixCards()[7]);
+  }
+  if (document.documentElement.clientWidth < 768) {
+    count.textContent = '16';
+    createCard(petCard, generateThreeCards()[15]);
+  }
   lastButton.classList.remove('our-friends__button_active');
   firstButton.classList.add('our-friends__button_active');
   previousButton.classList.add('our-friends__button_active');
   nextButton.classList.remove('our-friends__button_active');
 })
 
-createCard(petCard, pets);
+createCard(petCard, generateEightCards()[0]);
 popupHover();
