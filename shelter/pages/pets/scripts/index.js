@@ -2,19 +2,18 @@ import { pets } from './contain.js';
 import { page, petCard, closePopupButton, popup, popupOverlay, popupContainer, firstButton, previousButton, count, nextButton, lastButton } from './variables.js';
 import { popupHover } from './popup-hover.js'
 
+//create start random array
+const randomArr = pets.sort(()=>Math.random()-0.5);
+
 //create array with 48 cards;
 const bigContainer = [];
 for (let i = 0; i < 6; i++) {
-  pets.forEach((card) => bigContainer.push(card))
+  randomArr.forEach((card) => bigContainer.push(card));
 }
 
 //function create cards
 const createCard = (cards, pets) => {
   let i = 0;
-  //cards.forEach(card => {
-  //  addCard(card, i, pets);
-  //  i += 1;
-  //});
 
   if (document.documentElement.clientWidth >= 1280) {
     for (let i = 0; i < 8; i++) {
@@ -204,5 +203,5 @@ lastButton.addEventListener('click', () => {
   nextButton.classList.remove('our-friends__button_active');
 })
 
-createCard(petCard, generateEightCards()[0]);
+createCard(petCard, randomArr);
 popupHover();
