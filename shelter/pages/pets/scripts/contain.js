@@ -77,14 +77,14 @@ export const pets = [
     "parasites": ["none"]
   },
   {
-    "name": "Woody",
-    "img": "../../assets/images/pets-woody.png",
-    "type": "Dog",
-    "breed": "Golden Retriever",
-    "description": "Woody is a handsome 3 1/2 year old boy. Woody does know basic commands and is a smart pup. Since he is on the stronger side, he will learn a lot from your training. Woody will be happier when he finds a new family that can spend a lot of time with him.",
-    "age": "3 years 6 months",
-    "inoculations": ["adenovirus", "distemper"],
-    "diseases": ["right back leg mobility reduced"],
+    "name": "Freddie",
+    "img": "../../assets/images/pets-freddie.png",
+    "type": "Cat",
+    "breed": "British Shorthair",
+    "description": "Freddie is a little shy at first, but very sweet when he warms up. He likes playing with shoe strings and bottle caps. He is quick to learn the rhythms of his human’s daily life. Freddie has bounced around a lot in his life, and is looking to find his forever home.",
+    "age": "2 months",
+    "inoculations": ["rabies"],
+    "diseases": ["none"],
     "parasites": ["none"]
   }
 ]
